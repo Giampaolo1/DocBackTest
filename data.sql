@@ -1,4 +1,21 @@
-INSERT INTO `node_tree` (`idNode`, `level`,`iLeft`,`iRight`,) VALUES
+CREATE TABLE `node_tree` (
+  `idNode` int(11) NOT NULL AUTO_INCREMENT,
+  `level` int(11) NOT NULL,
+  `iLeft` int(11) NOT NULL,
+  `iRight` int(11) NOT NULL,
+  PRIMARY KEY (`idNode`)
+);
+
+CREATE TABLE `node_tree_names` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idNode` int(11) NOT NULL,
+  `language` varchar(255) NOT NULL,
+  `nodeName` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`idNode`) REFERENCES `node_tree`(`idNode`)
+);
+
+INSERT INTO `node_tree` (`idNode`, `level`,`iLeft`,`iRight`) VALUES
 (1, 2, 2, 3),
 (2, 2, 4, 5),
 (3, 2, 6, 7),

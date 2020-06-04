@@ -1,21 +1,4 @@
 
-CREATE TABLE `node_tree` (
-  `idNode` int(11) NOT NULL AUTO_INCREMENT,
-  `level` int(11) NOT NULL,
-  `iLeft` int(11) NOT NULL,
-  `iRight` int(11) NOT NULL,
-  PRIMARY KEY (`idNode`)
-);
-
-
-CREATE TABLE `node_tree_names"` (
-  `idNode` int(11) NOT NULL AUTO_INCREMENT,
-  `language` varchar(255) NOT NULL,
-  `nodeName` varchar(255) NOT NULL,
-  PRIMARY KEY (`idNode`)
-);
-
---------------------------------------------------------------
 
 Relations:
 node-tree <--1<>*--> node_tree_names
