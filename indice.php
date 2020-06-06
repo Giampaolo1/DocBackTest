@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
     <!-- TEMPLATE: MESSAGE MENU -->
     <script id="box-template" type="text/x-handlebars-template">
-      <p> [{{idNode}}] {{ level }} {{ iLeft }} {{ iRight }}</p>
+      <p> [{{idNode}}] Level:{{ level }} iLeft:{{ iLeft }} iRight:{{ iRight }}</p>
     </script>
 
     <title>Organizational Chart</title>
