@@ -1,21 +1,35 @@
-CREATE TABLE `node_tree` (
-  `idNode` int(11) NOT NULL AUTO_INCREMENT,
-  `level` int(11) NOT NULL,
-  `iLeft` int(11) NOT NULL,
-  `iRight` int(11) NOT NULL,
-  PRIMARY KEY (`idNode`)
-);
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jun 06, 2020 at 08:24 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.14
 
-CREATE TABLE `node_tree_names` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idNode` int(11) NOT NULL,
-  `language` varchar(255) NOT NULL,
-  `nodeName` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`idNode`) REFERENCES `node_tree`(`idNode`)
-);
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-INSERT INTO `node_tree` (`idNode`, `level`,`iLeft`,`iRight`) VALUES
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `organizational_chart`
+--
+
+-- --------------------------------------------------------
+
+
+--
+-- Dumping data for table `node_tree`
+--
+
+INSERT INTO `node_tree` (`idNode`, `level`, `iLeft`, `iRight`) VALUES
 (1, 2, 2, 3),
 (2, 2, 4, 5),
 (3, 2, 6, 7),
@@ -29,28 +43,39 @@ INSERT INTO `node_tree` (`idNode`, `level`,`iLeft`,`iRight`) VALUES
 (11, 3, 13, 14),
 (12, 2, 22, 23);
 
-INSERT INTO `node_tree_names` (`idNode`, `language`,`nodeName`) VALUES
-(1, "english", "Marketing"),
-(1, "italian", "Marketing"),
-(2, "english", "Helpdesk"),
-(2, "italian", "Supporto Tecnico"),
-(3, "english", "Managers"),
-(3, "italian", "Managers"),
-(4, "english", "Customer Account"),
-(4, "italian", "Assistenza Cliente"),
-(5, "english", "Docebo"),
-(5, "italian", "Docebo"),
-(6, "english", "Accounting"),
-(6, "italian", "Amministrazione"),
-(7, "english", "Sales"),
-(7, "italian", "Supporto Vendite"),
-(8, "english", "Italy"),
-(8, "italian", "Italia"),
-(9, "english", "Europe"),
-(9, "italian", "Europa"),
-(10, "english", "Developers"),
-(10, "italian", "Sviluppatori"),
-(11, "english", "North America"),
-(11, "italian", "Nord America"),
-(12, "english", "Quality Assurance"),
-(12, "italian", "Controllo Qualità");
+-- --------------------------------------------------------
+
+
+--
+-- Dumping data for table `node_tree_names`
+--
+
+INSERT INTO `node_tree_names` (`id`, `idNode`, `language`, `nodeName`) VALUES
+(1, 1, 'english', 'Marketing'),
+(2, 1, 'italian', 'Marketing'),
+(3, 2, 'english', 'Helpdesk'),
+(4, 2, 'italian', 'Supporto Tecnico'),
+(5, 3, 'english', 'Managers'),
+(6, 3, 'italian', 'Managers'),
+(7, 4, 'english', 'Customer Account'),
+(8, 4, 'italian', 'Assistenza Cliente'),
+(9, 5, 'english', 'Docebo'),
+(10, 5, 'italian', 'Docebo'),
+(11, 6, 'english', 'Accounting'),
+(12, 6, 'italian', 'Amministrazione'),
+(13, 7, 'english', 'Sales'),
+(14, 7, 'italian', 'Supporto Vendite'),
+(15, 8, 'english', 'Italy'),
+(16, 8, 'italian', 'Italia'),
+(17, 9, 'english', 'Europe'),
+(18, 9, 'italian', 'Europa'),
+(19, 10, 'english', 'Developers'),
+(20, 10, 'italian', 'Sviluppatori'),
+(21, 11, 'english', 'North America'),
+(22, 11, 'italian', 'Nord America'),
+(23, 12, 'english', 'Quality Assurance'),
+(24, 12, 'italian', 'Controllo Qualità');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
