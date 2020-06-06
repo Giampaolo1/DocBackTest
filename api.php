@@ -12,7 +12,6 @@
 
   SELECT *
   FROM node_tree
-  INNER JOIN node_tree_names
 
   ";
 

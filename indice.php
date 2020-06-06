@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <title>zz</title>
+    <title>Organizational Chart</title>
   </head>
   <body>
 
