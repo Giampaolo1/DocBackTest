@@ -11,11 +11,20 @@
       <p> [{{idNode}}] Level:{{ level }} iLeft:{{ iLeft }} iRight:{{ iRight }}</p>
     </script>
 
+    <script id="box-template2" type="text/x-handlebars-template">
+      <p> [{{idNode}}] Language: {{ language }} <br> nodeName: {{ nodeName }}</p>
+    </script>
+
+
     <title>Organizational Chart</title>
   </head>
   <body>
 
     <div id="container">
+      <h3>node_tree:</h3>
+    </div>
+    <div id="container2">
+      <h3>node_tree_names:</h3>
     </div>
 
   </body>

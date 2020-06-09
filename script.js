@@ -14,6 +14,21 @@ function printData(data) {
   }
 }
 
+function printData2(data2) {
+
+  var target = $("#container2");
+
+  var template = $("#box-template2").html();
+  var compiled = Handlebars.compile(template);
+
+  for (var i = 0; i < data2.length; i++) {
+    var person = data2[i];
+    var personHTML = compiled(person);
+    target.append(personHTML);
+  }
+}
+
+
 // ----------------------------------
 
 // function printData(data) {
@@ -24,7 +39,7 @@ function getData() {
 
   $.ajax({
 
-    url: "api.php",
+    url: "getNodeTree.php",
     method: "GET",
     success : function(data) {
 
@@ -39,8 +54,29 @@ function getData() {
   });
 }
 
+function getData2() {
+
+  $.ajax({
+
+    url: "getNodeTreeNames.php",
+    method: "GET",
+    success : function(data2) {
+
+      printData2(data2);
+
+      console.log("data2", data2);
+    },
+    error: function(err) {
+
+      console.log("err", err);
+    }
+  });
+}
+
+
 function init() {
   getData();
+  getData2();
 }
 
 $(document).ready(init);
