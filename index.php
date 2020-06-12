@@ -33,6 +33,7 @@
 
     <div id="container4">
       <h3>Results:</h3>
+      <p>(EX: All Nodes with ID 2)</p>
     </div>
 
     <p>-------------------------------------------------</p>
