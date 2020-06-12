@@ -28,6 +28,21 @@ function printData2(data2) {
   }
 }
 
+function printData3(data3) {
+
+  var target = $("#container4");
+
+  var template = $("#box-template2").html();
+  var compiled = Handlebars.compile(template);
+
+  for (var i = 0; i < data3.length; i++) {
+    var person = data3[i];
+    var personHTML = compiled(person);
+    target.append(personHTML);
+  }
+}
+
+
 
 // ----------------------------------
 
@@ -73,10 +88,34 @@ function getData2() {
   });
 }
 
+function getData3() {
+
+  $.ajax({
+
+    url: "getDataByID.php",
+    method: "GET",
+    success : function(data3) {
+
+      console.log("data3", data3);
+      printData3(data3);
+      // $(".button").click(printData3(data3));
+
+    },
+    error: function(err) {
+
+      console.log("err", err);
+    }
+
+  });
+
+}
 
 function init() {
   getData();
   getData2();
+  getData3();
+
 }
+
 
 $(document).ready(init);

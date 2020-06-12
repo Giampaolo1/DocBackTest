@@ -20,6 +20,23 @@
   </head>
   <body>
 
+    <div id="container3">
+      <h3>Search</h3>
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="Node ID"> <br>
+        <input type="text" name="" value="" placeholder="Language"> <br><br>
+        <input class="button" type="button" name="" value="Search">
+      </form>
+    </div>
+
+    <p>-------------------------------------------------</p>
+
+    <div id="container4">
+      <h3>Results:</h3>
+    </div>
+
+    <p>-------------------------------------------------</p>
+
     <div id="container">
       <h3>node_tree:</h3>
     </div>
